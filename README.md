@@ -2,9 +2,10 @@
 
 An open-source initiave to document and share experiments to apply Retrieval Augmented Generation (RAG) techniques to Threat Intelligence searching capabilities.
 
-## Build Docker Image
+## Build Docker Image: Run this command from API folder
 
 ```
+
 docker build . -t rag-chroma
 ```
 
@@ -16,7 +17,7 @@ Create a `.env` file and define the `OPENAI_API_KEY` variable with your OpenAI K
 OPENAI_API_KEY=XXXXXXXXX
 ```
 
-## Run Docker Image
+## Run Docker Image:| Execute from root folder
 
 ```
 docker run -it --rm --name rag-chroma --env-file .env -p 8080:8080 rag-chroma
@@ -30,7 +31,7 @@ After running that command, the container will:
 
 ## Explore Playground
 
-Browse to `http://127.0.0.1/rag-chroma/playground` and start asking questions.
+Browse to `http://127.0.0.1:<<port number>>/rag-chroma/playground` and start asking questions.
 
 ![](images/LangServer-Playground.png)
 
